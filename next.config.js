@@ -1,6 +1,12 @@
 const withSass = require('@zeit/next-sass');
+const path = require('path');
 
 module.exports = withSass({
+  cssModules: true,
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: '[local]___[hash:base64:5]',
+  },
   webpack(config, { isServer }) {
     config.resolve.alias['theme'] = path.join(__dirname, 'theme');
     config.resolve.alias['store'] = path.join(__dirname, 'store');

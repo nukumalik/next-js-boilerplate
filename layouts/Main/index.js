@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 
-// import css from './style.scss';
+import css from './style.scss';
 
 const Main = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const Main = ({ children }) => {
         <link rel='stylesheet' href='/css/app.css' />
       </Head>
 
-      <div className='{css.main_wrapper}'>{children}</div>
+      <div className={css.main_wrapper}>{children}</div>
     </>
   );
 };
